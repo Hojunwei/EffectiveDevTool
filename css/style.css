@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+    color: #F3F4F5;
+    background-color: #EFEFEF;
+}
+
+/*-------------
+	Layout
+--------------*/
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font: 400 15px/1.4 'Open Sans',sans-serif;
+}
+
+header{
+    flex: 0 0 auto;
+}
+
+.main-content{
+    flex: 1 0 auto;
+}
+
+footer{
+    flex: 0 0 auto;
+}
+
+
+/*-------------
+	Header
+--------------*/
+
+header {
+    background-color: #292c2f;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    padding: 20px 40px;
+}
+
+header .header-limiter {
+    //max-width: 880px;
+}
+
+header .header-limiter h1 {
+    line-height: 40px;
+    font-size: 18px;
+    padding-left: 100px;
+}
+
+header .header-limiter a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/*--------------------
+	Main Content
+--------------------*/
+
+.main-content{
+    color: #525252;
+    padding: 60px 50px;
+}
+
+.card {
+    max-width: 880px;
+    margin: 0 auto;
+    background-color: #fff;
+    height: 100%;
+    padding: 60px 90px;
+    text-align: center;
+}
+
+.card h1{
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+.card h3{
+    font-weight: normal;
+    color: #999;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0 auto 35px;
+}
+
+.card #add-content{
+    display: inline-block;
+    padding: 15px 60px;
+    background: #E91E63;
+    border-radius: 3px;
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+
+/*--------------------
+	Footer styles
+--------------------*/
+footer{
+    background-color: #292c2f;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    padding: 20px 40px;
+}
+
+footer .footer-limiter {
+    padding: 0 100px;
+}
+
+
+footer .footer-limiter span:first-child {
+    line-height: 40px;
+    font-size: 18px;
+    float: left;
+}
+
+footer .footer-limiter span:last-child {
+    line-height: 40px;
+    font-size: 18px;
+    float: right;
+}

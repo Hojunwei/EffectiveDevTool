@@ -44,10 +44,6 @@ header {
     padding: 20px 40px;
 }
 
-header .header-limiter {
-    //max-width: 880px;
-}
-
 header .header-limiter h1 {
     line-height: 40px;
     font-size: 18px;
@@ -66,14 +62,15 @@ header .header-limiter a {
 .main-content{
     color: #525252;
     padding: 60px 50px;
+    display: flex;
 }
 
 .card {
-    max-width: 880px;
+    width:30%;
     margin: 0 auto;
     background-color: #fff;
     height: 100%;
-    padding: 60px 90px;
+    padding: 60px 60px;
     text-align: center;
 }
 
@@ -90,7 +87,7 @@ header .header-limiter a {
     margin: 0 auto 35px;
 }
 
-.card #add-content{
+.card a{
     display: inline-block;
     padding: 15px 60px;
     background: #E91E63;
@@ -114,15 +111,27 @@ footer .footer-limiter {
     padding: 0 100px;
 }
 
-
-footer .footer-limiter span:first-child {
+footer .footer-limiter span {
     line-height: 40px;
     font-size: 18px;
+    font-weight: bold;
+}
+
+footer .footer-limiter span:first-child {
     float: left;
 }
 
 footer .footer-limiter span:last-child {
-    line-height: 40px;
-    font-size: 18px;
     float: right;
+}
+
+footer .footer-limiter a{
+    width: 30px;
+    height: 30px;
+    background-color:  #292c2f;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 30px;
+    margin-left: 6px;
 }

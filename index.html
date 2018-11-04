@@ -1,50 +1,90 @@
-
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Hojunwei">
+
     <title>Effective Develop Tool</title>
 
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
 </head>
-
 <body>
 
 <header>
-    <div class="header-limiter">
-        <h1><a href="https://119.23.220.57">Effective Develop Tool</a></h1>
-    </div>
-
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="https://119.23.220.57">Effective Develop Tool</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">代码生成平台</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">JSON格式化</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">接口mock</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 </header>
 
-<section class="main-content">
-    <div class="card">
-        <h1>XXL-Code-Generator</h1>
-        <h3>简洁、轻量级、多层代码生成（controller/service/dao/mybatis/model）、高效、在线预览</h3>
-        <a href='http://119.23.220.57:8080/xxl-code-generator/' target="_blank">代码生成平台</a>
+<main role="main" class="p-5 text-center" style="background-color: #EFEFEF">
+    <div class="card-deck text-center">
+        <div class="card py-5">
+            <div class="card-header bg-white border-0">
+                <h4 class="my-0 font-weight-bold">XXL-Code-Generator</h4>
+            </div>
+            <div class="card-body">
+                <span class="font-weight-normal" style="color:#999">简洁、轻量级、多层代码生成（controller/service/dao/mybatis/model）、高效、在线预览</span>
+            </div>
+            <div class="card-footer bg-white border-0">
+                <a class="btn px-5 py-2 toolBtn" href="http://119.23.220.57:8080/xxl-code-generator/" target="_blank">代码生成平台</a>
+            </div>
+        </div>
+        <div class="card py-5">
+            <div class="card-header bg-white border-0">
+                <h4 class="my-0 font-weight-bold">JSON格式化(开发中)</h4>
+            </div>
+            <div class="card-body">
+                <span class="font-weight-normal" style="color:#999"></span>
+            </div>
+            <div class="card-footer bg-white border-0">
+                <a class="btn px-5 py-2 toolBtn" href="#">代码生成平台</a>
+            </div>
+        </div>
+        <div class="card py-5">
+            <div class="card-header bg-white border-0">
+                <h4 class="my-0 font-weight-bold">接口mock(开发中)</h4>
+            </div>
+            <div class="card-body">
+                <span class="font-weight-normal" style="color:#999"></span>
+            </div>
+            <div class="card-footer bg-white border-0">
+                <a class="btn px-5 py-2 toolBtn" href="#">代码生成平台</a>
+            </div>
+        </div>
     </div>
-    <div class="card">
-        <h1>JSON格式化(开发中)</h1>
-        <h3 style="visibility:hidden;">简洁、轻量级、多层代码生成（controller/service/dao/mybatis/model）、高效、在线预览</h3>
-        <a href='#'>JSON格式化</a>
-    </div>
-    <div class="card">
-        <h1>接口mock(开发中)</h1>
-        <h3 style="visibility:hidden;">简洁、轻量级、多层代码生成（controller/service/dao/mybatis/model）、高效、在线预览</h3>
-        <a href='#'>接口mock</a>
-    </div>
-</section>
+</main>
 
-<footer>
-    <div class="footer-limiter">
-        <span>Powered by JUNWEIGEGE Effective Develop Tool</span>
-        <span>Copyright ©2018-2018<a href="https://github.com/Hojunwei/EffectiveDevTool"><i class="fa fa-github"></i></a></span>
+<footer class="footer bg-dark">
+    <div class="container text-center">
+        <span class="text-white">Powered by Ho Effective Develop Tool
+            <a href="https://github.com/Hojunwei/EffectiveDevTool" class="text-white ml-1">
+                <i class="fa fa-github"></i>
+            </a>
+        </span>
     </div>
 </footer>
 
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
-
 </html>

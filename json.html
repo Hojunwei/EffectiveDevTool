@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Hojunwei">
+
+    <title>Effective Develop Tool</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/json.css" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="http://119.23.220.57">Effective Develop Tool</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="http://119.23.220.57:8080/xxl-code-generator/" target="_blank">代码生成平台</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="json.html">JSON格式化</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">接口mock</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<main role="main" class="p-5 d-flex align-items-stretch" id="app">
+    <div class="col-6">
+        <textarea class="h-100 w-100 border border-dark" placeholder="请在此处输入JSON字符串" style="resize:none" v-model="rawJson"></textarea>
+    </div>
+    <div class="col-6">
+        <pre class="h-100 w-100 bg-white border border-dark" v-html="formattedJsonHtml"></pre>
+    </div>
+</main>
+
+<footer class="footer bg-dark">
+    <div class="container text-center">
+        <span class="text-white">Powered by Ho Effective Develop Tool
+            <a href="https://github.com/Hojunwei/EffectiveDevTool" class="text-white ml-1">
+                <i class="fa fa-github"></i>
+            </a>
+        </span>
+    </div>
+</footer>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="js/json.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            helloJson: "{'Hello':'EffectiveDevTool'}",
+            rawJson: "",
+            formattedJsonHtml: "",
+        },
+        watch: {
+            rawJson:function (jsonStr) {
+                this.formatJson(jsonStr);
+            }
+        },
+        methods: {
+            formatJson: function (jsonStr) {
+                if (jsonStr.trim() != "") {
+                    try {
+                        this.formattedJsonHtml = format(jsonStr);
+                    } catch (e) {
+                        this.showErrorInfo();
+                    }
+                }
+            },
+            showErrorInfo: function () {
+                this.formattedJsonHtml = "<div class='alert alert-danger'>JSON字符串格式错误</div>";
+            }
+        },
+        mounted: function () {
+            this.formatJson(this.helloJson);
+        }
+    })
+</script>
+</body>
+</html>

@@ -9,6 +9,12 @@ body{
   height: 100%;
 }
 
+#app{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
 header{
   /* We want the header to have a static height - it will always take up just as much space as it needs.  */
   /* 0 flex-grow, 0 flex-shrink, auto flex-basis */

@@ -8,9 +8,17 @@ Vue.component("devtool-header", {
     "       </button>" +
     "       <div class='collapse navbar-collapse' id='navbarCollapse'>" +
     "           <ul class='navbar-nav'>" +
-    "               <li class='nav-item' v-bind:class='{active: active == menu.code}' v-for='menu in menus'>" +
+    "           <template  v-for='(menu,index) in menus'>" +
+    "               <li v-if='menu.children' class='nav-item dropdown' v-bind:class='{active: active == menu.code}'>" +
+    "                   <a class='nav-link dropdown-toggle' data-toggle='dropdown' :id=\"'dropdown-'+index\">{{menu.name}}</a>" +
+    "                   <div class='dropdown-menu' :aria-labelledby=\"'dropdown-'+index\">" +
+    "                       <a class='dropdown-item' v-bind:href='child.url' v-bind:target='child.target' v-for='child in menu.children'>{{child.name}}</a>" +
+    "                   </div>" +
+    "               </li>" +
+    "               <li v-else class='nav-item'  v-bind:class='{active: active == menu.code}'>" +
     "                   <a class='nav-link' v-bind:href='menu.url' v-bind:target='menu.target'>{{menu.name}}</a>" +
     "               </li>" +
+    "           </template>" +
     "           </ul>" +
     "       </div>" +
     "   </nav>" +
@@ -24,14 +32,41 @@ Vue.component("devtool-header", {
                 url: "http://119.23.220.57:8080/xxl-code-generator/",
                 target:'_blank'
             }, {
-                name: "JSON格式化",
-                code: "jsonFormatter",
-                url: "json.html"
+                name: "JSON",
+                code: "json",
+                url: "#",
+                children: [{
+                    name: "JSON格式化",
+                    code: "jsonFormatter",
+                    url: "json.html"
+                },{
+                    name: "JSON编辑器",
+                    code: "jsonEditor",
+                    url: "#"
+                }]
             }, {
                 name: "接口mock",
                 code: "mockInterface",
                 url: "#"
-            }]
+            },{
+                name: "常用对照表",
+                code: "commonTable",
+                url: "#",
+                children : [{
+                    name: "HTTP状态码表",
+                    code: "httpCode",
+                    url: "#"
+                },{
+                    name: "HTTP请求头大全",
+                    code: "httpHead",
+                    url: "#"
+                },{
+                    name: "HTTP请求方法",
+                    code: "httpMethod",
+                    url: "#"
+                }]
+            }
+            ]
         }
     },
     methods: {}

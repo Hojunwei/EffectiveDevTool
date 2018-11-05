@@ -24,7 +24,7 @@ function ProcessObject(obj, indent, addComma, isArray, isPropertyContent) {
         if (obj.length == 0) {
             html += GetRow(indent, "<span class='ArrayBrace'>[ ]</span>" + comma, isPropertyContent);
         } else {
-            clpsHtml = "<span><img src=\"" + window.ImgExpanded + "' onClick='ExpImgClicked(this)' /></span><span class='collapsible'>";
+            clpsHtml = "<span><img src=\"" + window.ImgExpanded + "\" onClick=\"ExpImgClicked(this)\" /></span><span class='collapsible'>";
             html += GetRow(indent, "<span class='ArrayBrace'>[</span>" + clpsHtml, isPropertyContent);
             for (var i = 0; i < obj.length; i++) {
                 html += ProcessObject(obj[i], indent + 1, i < (obj.length - 1), true, false);
@@ -45,7 +45,7 @@ function ProcessObject(obj, indent, addComma, isArray, isPropertyContent) {
             if (numProps == 0) {
                 html += GetRow(indent, "<span class='ObjectBrace'>{ }</span>" + comma, isPropertyContent);
             } else {
-                clpsHtml = "<span><img src=\"" + window.ImgExpanded + "' onClick='ExpImgClicked(this)' /></span><span class='collapsible'>";
+                clpsHtml = "<span><img src=\"" + window.ImgExpanded + "\" onClick=\"ExpImgClicked(this)\" /></span><span class='collapsible'>";
                 html += GetRow(indent, "<span class='ObjectBrace'>{</span>" + clpsHtml, isPropertyContent);
 
                 var j = 0;

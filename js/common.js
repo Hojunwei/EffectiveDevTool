@@ -85,5 +85,12 @@ Vue.component("devtool-footer", {
         "</footer>"
 });
 
+var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?ce686945a67e81318bc52dee643147d7";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+})();
 
 

@@ -54,7 +54,7 @@ Vue.component("devtool-header", {
                 url: "#",
                 children : [{
                     name: "HTTP状态码表",
-                    code: "httpCode",
+                    code: "httpStatusCode",
                     url: "#"
                 },{
                     name: "HTTP请求头大全",

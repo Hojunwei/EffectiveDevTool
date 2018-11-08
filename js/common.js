@@ -78,7 +78,7 @@ Vue.component("devtool-footer", {
         "   <div class='container text-center'>" +
         "       <span class='text-white'>Powered by Ho Effective Develop Tool" +
         "           <a href='https://github.com/Hojunwei/EffectiveDevTool' class='text-white ml-1'>" +
-        "               <i class='fa fa-github'></i>" +
+        "               <i class='fa fa-github fa-lg'></i>" +
         "           </a>" +
         "       </span>" +
         "       <span class='text-white pl-3'>QQ群：566614235</span>" +

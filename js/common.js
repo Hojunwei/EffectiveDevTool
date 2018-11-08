@@ -81,6 +81,7 @@ Vue.component("devtool-footer", {
         "               <i class='fa fa-github'></i>" +
         "           </a>" +
         "       </span>" +
+        "       <span class='text-white pl-3'>QQ群：566614235</span>" +
         "   </div>" +
         "</footer>"
 });

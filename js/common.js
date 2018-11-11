@@ -29,7 +29,7 @@ Vue.component("devtool-header", {
             menus: [{
                 name: "代码生成平台",
                 code: "codeGenerator",
-                url: "http://119.23.220.57:8080/xxl-code-generator/",
+                url: "http://119.23.220.57/xxl-code-generator/",
                 target:'_blank'
             }, {
                 name: "JSON",
@@ -40,7 +40,7 @@ Vue.component("devtool-header", {
                     code: "jsonFormatter",
                     url: "json.html"
                 },{
-                    name: "JSON编辑器",
+                    name: "JSON编辑器(开发中)",
                     code: "jsonEditor",
                     url: "#"
                 }]
@@ -57,11 +57,11 @@ Vue.component("devtool-header", {
                     code: "httpStatusCode",
                     url: "httpStatusCode.html"
                 },{
-                    name: "HTTP请求头大全",
+                    name: "HTTP请求头大全(整理中)",
                     code: "httpHead",
                     url: "#"
                 },{
-                    name: "HTTP请求方法",
+                    name: "HTTP请求方法(整理中)",
                     code: "httpMethod",
                     url: "#"
                 }]

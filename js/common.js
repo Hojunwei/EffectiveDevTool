@@ -47,7 +47,7 @@ Vue.component("devtool-header", {
             }, {
                 name: "接口mock",
                 code: "mockInterface",
-                url: "#"
+                url: "mock.html"
             },{
                 name: "常用对照表",
                 code: "commonTable",

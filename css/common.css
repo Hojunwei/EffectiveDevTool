@@ -37,7 +37,7 @@ footer{
 
 .footer {
   height: 56px; /* Set the fixed height of the footer here */
-  line-height: 56px; /* Vertically center the text there */
+  /**line-height: 24px; /* Vertically center the text there */
 }
 
 .toolBtn{

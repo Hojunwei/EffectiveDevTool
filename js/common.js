@@ -2,7 +2,7 @@ Vue.component("devtool-header", {
     template:
     "<header>" +
     "   <nav class='navbar navbar-expand-md navbar-dark bg-dark'>" +
-    "       <a class='navbar-brand' href='http://119.23.220.57'>Effective Develop Tool</a>" +
+    "       <a class='navbar-brand' href='http://www.666tool.com'>Effective Develop Tool</a>" +
     "       <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarCollapse' aria-controls='navbarCollapse' aria-expanded='false' aria-label='Toggle navigation'>" +
     "           <span class='navbar-toggler-icon'></span>" +
     "       </button>" +
@@ -29,7 +29,7 @@ Vue.component("devtool-header", {
             menus: [{
                 name: "代码生成平台",
                 code: "codeGenerator",
-                url: "http://119.23.220.57/xxl-code-generator/",
+                url: "http://www.666tool.com/xxl-code-generator/",
                 target:'_blank'
             }, {
                 name: "JSON",
@@ -75,13 +75,15 @@ Vue.component("devtool-header", {
 Vue.component("devtool-footer", {
     template:
         "<footer class='footer bg-dark'>" +
-        "   <div class='container text-center'>" +
-        "       <span class='text-white'>Powered by Ho Effective Develop Tool" +
+        "   <div class='container text-center pt-1'>" +
+        "       " +
+        "       <span class='text-white pl-3'>Powered by Ho Effective Develop Tool" +
         "           <a href='https://github.com/Hojunwei/EffectiveDevTool' class='text-white ml-1'>" +
         "               <i class='fa fa-github fa-lg'></i>" +
         "           </a>" +
         "       </span>" +
         "       <span class='text-white pl-3'>QQ群：566614235</span>" +
+        "       <p><a class='text-white' style='text-decoration: none; font-size:12px' href='http://www.miitbeian.gov.cn/'>粤ICP备18139725号-1</a></p>"+
         "   </div>" +
         "</footer>"
 });
